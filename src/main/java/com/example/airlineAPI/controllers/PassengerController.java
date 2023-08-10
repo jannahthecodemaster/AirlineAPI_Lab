@@ -2,7 +2,7 @@ package com.example.airlineAPI.controllers;
 
 import com.example.airlineAPI.repositories.PassengerRepository;
 import com.example.airlineAPI.services.PassengerService;
-import models.Passenger;
+import com.example.airlineAPI.models.Passenger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

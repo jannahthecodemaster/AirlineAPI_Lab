@@ -2,8 +2,8 @@ package com.example.airlineAPI.components;
 
 import com.example.airlineAPI.repositories.FlightRepository;
 import com.example.airlineAPI.repositories.PassengerRepository;
-import models.Flight;
-import models.Passenger;
+import com.example.airlineAPI.models.Flight;
+import com.example.airlineAPI.models.Passenger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

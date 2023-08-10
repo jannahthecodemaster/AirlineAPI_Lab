@@ -1,35 +1,55 @@
-package models;
+package com.example.airlineAPI.models;
 
-import jakarta.persistence.Column;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.*;
 
 import java.util.List;
 
-public class FlightDTO {
+@Entity
+@Table(name = "flights")
+public class Flight {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
+    private Long id;
 
+    @Column
     private String destination;
 
-
+    @Column
     private int capacity;
 
-
+    @Column
     private String departureDate;
 
-
+    @Column
     private String departureTime;
 
-    private List<Long> passengerIds;
+    @ManyToMany
+    @JsonIgnoreProperties({"flights"})
+    @JoinTable( name = "flights_passengers",
+            joinColumns = @JoinColumn(name = "flight_id"),
+            inverseJoinColumns = @JoinColumn(name = "passenger_id")
+    )
+    private List<Passenger> passengers;
 
-    public FlightDTO(String destination, int capacity, String departureDate, String departureTime, List<Long> passengerIds) {
+    public Flight(String destination, int capacity, String departureDate, String departureTime) {
         this.destination = destination;
         this.capacity = capacity;
         this.departureDate = departureDate;
         this.departureTime = departureTime;
-        this.passengerIds = passengerIds;
     }
 
-    public FlightDTO (){
+    public Flight() {
+    }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getDestination() {
@@ -63,11 +83,12 @@ public class FlightDTO {
     public void setDepartureTime(String departureTime) {
         this.departureTime = departureTime;
     }
-    public List<Long> getPassengerIds() {
-        return passengerIds;
+
+    public List<Passenger> getPassengers() {
+        return passengers;
     }
 
-    public void setPassengerIds(List<Long> flightIds) {
-        this.passengerIds = passengerIds;
+    public void setPassengers(List<Passenger> passengers) {
+        this.passengers = passengers;
     }
 }

@@ -1,6 +1,6 @@
 package com.example.airlineAPI.repositories;
 
-import models.Passenger;
+import com.example.airlineAPI.models.Passenger;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

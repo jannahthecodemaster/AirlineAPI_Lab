@@ -1,4 +1,4 @@
-package models;
+package com.example.airlineAPI.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;

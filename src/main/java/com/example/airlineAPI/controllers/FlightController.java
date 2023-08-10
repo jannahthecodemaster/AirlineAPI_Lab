@@ -1,9 +1,9 @@
 package com.example.airlineAPI.controllers;
 
 import com.example.airlineAPI.services.FlightService;
-import models.Flight;
-import models.FlightDTO;
-import models.Passenger;
+import com.example.airlineAPI.models.Flight;
+import com.example.airlineAPI.models.FlightDTO;
+import com.example.airlineAPI.models.Passenger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

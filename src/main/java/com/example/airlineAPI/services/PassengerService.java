@@ -1,10 +1,7 @@
 package com.example.airlineAPI.services;
 
-import com.example.airlineAPI.repositories.FlightRepository;
 import com.example.airlineAPI.repositories.PassengerRepository;
-import models.Flight;
-import models.FlightDTO;
-import models.Passenger;
+import com.example.airlineAPI.models.Passenger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
